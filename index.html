@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <script src="script.js" charset="utf-8"></script>
+    <title>Local Storage JS</title>
+  </head>
+  <body>
+    <h1>Editeur CSS</h1>
+
+<div class="carre">
+    <div class="couleurs">
+    <div class="color green" onclick="changeColor(this)"></div>
+    <div class="color red" onclick="changeColor(this)"></div>
+    <div class="color blue" onclick="changeColor(this)"></div>
+    <div class="color yellow" onclick="changeColor(this)"></div>
+    <div class="color pink" onclick="changeColor(this)"></div>
+    <div class="color grey" onclick="changeColor(this)"></div>
+
+    </div>
+    <div class="boutons">
+
+    <input type="button" id="souligne" value="Souligner le texte"onclick="souligne();"> <br/>
+    <input type="button" id="italique" value="Mettre en italique"onclick="italique();"/> <br/>
+    <input type="button" id="gras" value="Mettre en gras"onclick="gras();"/> <br/>
+
+    
+
+
+    <select onchange="ChangeTextAlign (this);" size="4">
+        <option />left
+        <option />right
+        <option selected="selected" />center
+        <option />justify
+    </select>
+
+    </div>
+<table align="center">
+<tr>
+<td align="center">
+Taille du texte : <a href="javascript:changetaille(8);">8</a> <a href="javascript:changetaille(12);">10</a> <a href="javascript:changetaille(16);">16</a> <a href="javascript:changetaille(24);">24</a>
+</td>
+</tr>
+</table>
+  </div>
+
+</div>
+
+<div id="wrap">
+
+	<form>
+    <div class="form">
+		  <p><label>Entrez votre texte :</label></p>
+		  <textarea id="nom" name="name" rows="8" cols="40"></textarea>
+
+			<input type="button" value="Ecrire" id="stockage">
+			<input type="reset" value="Effacer tout" id="effacer">
+			<input type="button" value="Récupérer" id="lecture">
+      <button id ="clear" onclick="window.localStorage.clear();">Reinitialiser</button>
+		</p>
+  </div>
+	</form>
+
+
+  <img src="fleche.png" alt="" />
+
+  <div class="containeur1">
+
+  <p id="yo"></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function ChangeTextAlign (selectTag) {
+
+      var whichSelected = selectTag.selectedIndex;
+
+
+      var alignValue = selectTag.options[whichSelected].text;
+
+      var div = document.getElementById ("yo");
+      div.style.textAlign = alignValue;
+  }
+</script>
+
+<script type="text/javascript">
+function changeColor(cible){
+ var couleur = cible.className;
+ couleur = couleur.substr(5);
+ document.getElementById('yo').style.color = couleur;
+}
+
+function souligne()
+{
+document.getElementById('yo').style.textDecoration='underline';
+}
+function italique()
+  {
+  document.getElementById('yo').style.fontStyle='italic';
+  }
+
+  function gras()
+  {
+  document.getElementById('yo').style.fontWeight='bold';
+  }
+
+</script>
+
+
+<script language="javascript">
+function changetaille(taille) {
+document.getElementById('yo').style.fontSize=taille+'px';
+}
+</script>
+
+
+
+
+
+<script>
+
+document.getElementById('stockage').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = {
+			nom:document.getElementById('nom').value,
+
+		};
+		localStorage.setItem('coord',JSON.stringify(coordonnees));
+		alert("Mémorisation effectuée");
+	} else alert("localStorage n'est pas supporté");
+};
+
+document.getElementById('lecture').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = JSON.parse(localStorage.getItem('coord'));
+		document.getElementById('nom').value = coordonnees.nom;
+
+
+    document.getElementById('yo').innerHTML = coordonnees.nom;
+		alert("Recupération des données.");
+	} else alert("localStorage n'est pas supporté");
+};
+
+  document.getElementById('supression').onclick = function(){
+  document.getElementById('nom').value = coordonnees.nom;
+
+  localStorage.clear();
+}
+
+</script>
+
+
+</body>
+</html>

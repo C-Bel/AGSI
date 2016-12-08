@@ -1,0 +1,210 @@
+body{
+  background-image:url(rih.jpeg);
+  background-repeat: no-repeat;
+}
+
+img{
+  height: 600px;
+  width: 900px;
+  margin-top: 100px;
+}
+
+
+.containeur1{
+  height: 590px;
+  width: 400px;
+  border: 3px solid black;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 10px 10px 5px #888888;
+
+}
+
+.carre{
+  margin-left: 700px;
+  margin-top: 50px;
+  height: 400px;
+  width: 400px;
+  border: 3px solid black;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#wrap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -100px;
+
+}
+
+form{
+  height:590px;
+  width: 400px;
+  border: 3px solid black;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 10px 10px 5px #888888;
+  text-align: center;
+
+}
+
+.form{
+  margin-top: 30px;
+}
+
+h1{
+  font-size: 50px;
+  height:100px;
+  width: 600px;
+  border: 3px solid black;
+  padding-top: 50px;
+  margin-left: 600px;
+  text-align: center;
+  text-shadow: 1px 1px;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 10px 10px 5px #888888;
+}
+textarea{
+  width: 250px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.couleurs{
+  margin-top: 50px;
+  margin-left: 110px;
+}
+
+.color{
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin : 5px;
+}
+.green{
+  background-color: green;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+.pink{
+  background-color: pink;
+}
+
+.grey{
+  background-color: grey;
+}
+
+.boutons{
+display: flex;
+flex-direction: column;
+height: 400px;
+width: 300px;
+margin-top: 120px;
+margin-left: 55px;
+}
+
+table{
+  margin-top: -170px;
+}
+
+#souligne{
+
+  border-radius:12px 0 12px 0;
+	background: #478bf9;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 0 6px 0;
+}
+
+#italique{
+  border-radius:12px 0 12px 0;
+	background: #478bf9;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 0 6px 0;
+}
+
+#gras{
+  border-radius:12px 0 12px 0;
+	background: #478bf9;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 0 6px 0;
+}
+
+#nom{
+  height: 200px;
+  width: 300px;
+}
+
+#valeur{
+  height: 25px;
+}
+
+#stockage{
+border-radius:50%;
+width:100px;
+height:100px;
+background: linear-gradient(#f7f7f7, #e7e7e7);
+box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+border:none;
+outline:none;
+font: 18px Tahoma bold;
+color: black;
+text-shadow: 1px 1px 1px lighgrey;
+margin:20px;
+}
+
+#effacer{
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  background: linear-gradient(#f7f7f7, #e7e7e7);
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  border:none;
+  outline:none;
+  font: 18px Tahoma bold;
+  color: black;
+  text-shadow: 1px 1px 1px lighgrey;
+  margin:20px;
+}
+
+#lecture{
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  background: linear-gradient(#f7f7f7, #e7e7e7);
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  border:none;
+  outline:none;
+  font: 18px Tahoma bold;
+  color: black;
+  text-shadow: 1px 1px 1px lighgrey;
+  margin:20px;
+}
+
+#clear{
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  background: linear-gradient(#f7f7f7, #e7e7e7);
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  border:none;
+  outline:none;
+  font: 18px Tahoma bold;
+  color: black;
+  text-shadow: 1px 1px 1px lighgrey;
+  margin:20px;
+}
